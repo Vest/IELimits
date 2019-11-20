@@ -1,0 +1,12 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title th:utext="${'CSS Rules: ' + count}"></title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <link rel="stylesheet" th:href="${'styles.css?count=' + count}">
+</head>
+<body>
+<div th:class="${'div' + index}" th:each="index : ${#numbers.sequence(1, count)}" th:utext="${'div' + index}">
+</div>
+</body>
+</html>
